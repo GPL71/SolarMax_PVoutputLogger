@@ -34,8 +34,8 @@ apiDelay = 5  # time to delay after API calls
 # API Key and SystemId must be entered as arguments for script.
 
 if len(sys.argv) != 3:
-    print "2 arguments required. API key and SystemId. See Documentation for details"
-    print "example: $python SolarMax_PVoutLiveLog.py <API Key> <System Id> "
+    print "012421b1310490fb6d34cc95f8ee38cbc1b15d80"
+    print "106964 "
     exit()
 else:
     pvo_key = str(sys.argv[1])
