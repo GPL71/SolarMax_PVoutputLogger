@@ -23,8 +23,8 @@ import datetime
 
 # Constants - range of Inverters supported
 inverter_types = {
-      20010: { 'desc': 'SolarMax 2000S', 'max': 2000, },
-      20020: { 'desc': 'SolarMax 3000S', 'max': 3000, },
+      20010: { 'desc': 'SolarMax 2000P', 'max': 2000, },
+      20020: { 'desc': 'SolarMax 3000P', 'max': 3000, },
       # 4200 and similar models have no ethernet port.
       # You can use netcat to a locally running serial => TCP service, e.g.:
       # nc -lk localhost 12345 >/dev/ttyUSB0 </dev/ttyUSB0
@@ -42,24 +42,24 @@ query_types = ['KDY', 'KYR', 'KMT', 'KT0', 'IL1', 'IDC', 'PAC', 'PRL',
 
 
 status_codes = {
-      20000: 'No Communication',
-      20001: 'In Use',
-      20002: 'Too little radiation',
-      20003: 'Approach', #? translation of Anfahren
+      20000: 'Nessuna comunicazione',
+      20001: 'Attivo',
+      20002: 'Irradiazione insufficiente',
+      20003: 'Avvio', #? translation of Anfahren
       20004: 'Operating at MPP',
-      20005: 'Fan Runs', #Ventilator läuft
-      20006: 'Operating at maximum power',
-      20007: 'Temperature Limit',
-      20008: 'Mains Operation',
+      20005: 'Ventilatore in funzione', #Ventilator läuft
+      20006: 'Operativo alla massima potenza',
+      20007: 'Limite di Temperatura',
+      20008: 'Funzionamento a rete',
     }
 
 
 alarm_codes = {
-          0: 'No Error',
-          1: 'External Fault 1',
-          2: 'Insulation fault DC side',
-          4: 'Earth fault current too large',
-          8: 'Fuse failure midpoint Earth',
+          0: 'Nessun Errore',
+          1: 'Guato esterno 1',
+          2: 'Guasto Isolamento lato DC',
+          4: 'Guasto a terra per corrente elevata',
+          8: 'Rottura fusibile verso terra',
          16: 'External alarm 2',
          32: 'Long-term temperature limit',
          64: 'Error AC supply ',
