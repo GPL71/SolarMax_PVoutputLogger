@@ -27,7 +27,7 @@ from PVoutput.pvoutput import PVoutput_Connection  # API for talking to the PVou
 
 # Array of inverters in system. IP address and device number
 # factory default is likely 192.168.1.123:12345 1
-inverters = {'192.168.1.123': [1, ]}
+inverters = {'192.168.50.205': [1, ]}
 
 # get pvoutput API details
 apiDelay = 5  # time to delay after API calls
